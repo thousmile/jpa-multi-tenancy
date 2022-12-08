@@ -6,4 +6,4 @@
 
 # jpa-multi-tenancy-schema-mysql            [模式（Schema）]
 
-# jpa-multi-tenancy-schema-table            [数据表（Table）]
+# jpa-multi-tenancy-table            [数据表（Table）]

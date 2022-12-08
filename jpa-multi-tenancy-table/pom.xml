@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.xaaef</groupId>
-    <artifactId>jpa-multi-tenancy-schema-table</artifactId>
+    <artifactId>jpa-multi-tenancy-table</artifactId>
     <version>1.1</version>
-    <name>jpa-multi-tenancy-schema-table</name>
+    <name>jpa-multi-tenancy-table</name>
 
     <description>
-        jpa-multi-tenancy-schema-table
+        jpa-multi-tenancy-table
     </description>
 
 
