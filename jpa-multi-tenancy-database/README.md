@@ -1,0 +1,21 @@
+# spring boot jpa 多租户 基于 数据库（DataBase）
+
+## 创建表结构使用的是 liquibase ，创建租户时，自动生成 表结构
+## 此方式，是 多连接池。每一个租户都添加一个数据库连接池，在 map 中。
+## 使用的时候，根据租户 id 获取连接池
+启动流程
+
+````
+
+一.创建一个 `molly_master` 的 数据库。
+    这是默认的 数据库 如果，想修改名称。需要修改两个地方
+    1. `CustomDataSources` 类中的 TENANT_ID_PREFIX 常量。这是默认生成数据库的前缀名称。用于区分项目
+    2. `TenantUtils` 类中的 DEFAULT_TENANT_ID 常量。这是默认租户的数据库
+
+
+二.修改 `application-dev.yml` 中的数据库连接池地址
+
+
+三. "REST API" 目录中 Test API.http 测试 api 接口
+
+````

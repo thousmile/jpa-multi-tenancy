@@ -1,0 +1,48 @@
+### 获取全部用户
+GET {{baseUrl}}/people
+Content-Type: application/json
+x-tenant-id: microsoft
+
+
+### 新增 用户
+POST {{baseUrl}}/people
+Content-Type: application/json
+x-tenant-id: microsoft
+
+{
+  "name": "比尔·盖茨",
+  "age": 67,
+  "grade": [1,2,3],
+  "hobby": ["篮球","泡澡","桑拿"]
+}
+
+
+### 新增 用户 2
+POST {{baseUrl}}/people
+Content-Type: application/json
+x-tenant-id: google
+
+{
+  "name": "拉里·佩奇",
+  "age": 49,
+  "grade": [4,5,6],
+  "hobby": ["唱K","跳舞","拳击"]
+}
+
+
+
+### 获取全部租户
+GET {{baseUrl}}/tenant
+Content-Type: application/json
+x-tenant-id: master
+
+
+### 新增租户
+POST {{baseUrl}}/tenant
+Content-Type: application/json
+x-tenant-id: master
+
+{
+  "tenantId": "google",
+  "name": "谷歌"
+}

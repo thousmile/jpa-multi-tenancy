@@ -1,0 +1,38 @@
+server:
+  port: 15666
+  shutdown: graceful
+
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: jpa-multi-tenancy-demo
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+    locale: zh_CN
+
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog.xml
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+    shutdown:
+      enabled: true
